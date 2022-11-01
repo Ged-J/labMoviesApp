@@ -22,13 +22,6 @@ const TemplateMoviePage = ({ movie, children }) => {
   }
   const images = data.posters
 
-  useEffect(() => {
-    getMovieImages(movie.id).then((images) => {
-      setImages(images);
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <>
       <MovieHeader movie={movie} />
